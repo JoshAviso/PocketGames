@@ -25,7 +25,8 @@ public class BattleUnitComponent : MonoBehaviour, IBattleUnit
         }
         
         StopAllCoroutines();
-        StartCoroutine(MoveStaggered(from, to, 2f, 10f, move_mode == IBattleUnit.MoveMode.Station_To_Offscreen));
+        // StartCoroutine(MoveStaggered(from, to, 2f, 10f, move_mode == IBattleUnit.MoveMode.Station_To_Offscreen));
+        StartCoroutine(MoveStaggered(from, to, 2f, 10f, false));
     }
 
     IEnumerator MoveStaggered(Transform from, Transform to, float moveSpeed, float rotSpeed, bool disableOnFinish)
